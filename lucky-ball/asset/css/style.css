@@ -306,17 +306,22 @@ a {
 
 .pick-ball.opened .award-animate {
   display: flex;
-  transform: scale(1) translate(-50%, -50%);
+  transform: scale(1) translate(-50%, -150%);
   opacity: 1;
   height: auto;
   width: auto;
   z-index: 10;
   overflow: hidden;
+  flex-direction: column;
 }
 
 .pick-ball.opened .award-animate img {
-  height: 60vh;
-  width: auto;
+  width: 8rem;
+}
+
+.size_text_award{
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .pick-ball.opened .award {
@@ -365,6 +370,10 @@ a {
   width: 100%;
 }
 
+.qua_awrad{
+  width: 2rem;
+}
+
 .award-value {
   position: absolute;
   top: 60%;
@@ -376,7 +385,41 @@ a {
   justify-content: center;
 
   flex-direction: column;
+
 }
+
+.award-value button{
+  background-color: transparent;
+  border: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.25s;
+  transform: translateY(15rem);
+  outline: none;
+}
+
+.award-value button:active{
+  transform: scale(0.96) translateY(15rem);
+}
+
+.award-value button img{
+  width: 8rem;
+  height: 4rem;
+}
+
+.award-value button span{
+  position: absolute;
+  font-weight: 600;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+}
+
+
+
 
 .token-gradient {
   -webkit-text-fill-color: transparent;
@@ -844,21 +887,23 @@ to {
   justify-content: center;
   align-items: center;
   position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 
-.wrapper_reward_group_content_row_text_item_img span{
-  position: absolute;
-  bottom: 0.4rem;
-  right: 0.6rem;
-  font-size: 12px;
+.wrapper_reward_group_content_row_text_item span{
+  font-size: 14px;
   color: rgb(230, 230, 28);
   font-weight: 600;
   font-family: 'Courier New', Courier, monospace;
+  margin-top: 10px;
 }
 
 .wrapper_reward_group_content_row_text_item_img img:nth-child(2){
   position: absolute;
-  width:2rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .wrapper_reward_group_content_row_text_item p{
@@ -894,12 +939,18 @@ to {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 
-.wrapper_reward_group_content_row_revice_group_img img:nth-child(2){
-  position: absolute;
-  width: 30%;
+.wrapper_reward_group_content_row_revice_group_img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
 
 .wrapper_reward_group_content_row_revice p{
   font-family: 'Courier New', Courier, monospace;

@@ -27,20 +27,18 @@
     <div id="pick-ball" class="pick-ball">
         <!-- HEADER -->
         <section class="header">
-            <div class="header-wrapper">
-                <div class="header-box">
-                    <a href="/">
-                        <img src="./asset/img/home-button.png" alt="" class="header-icon">
-                    </a>
-                    <div class="header-amount centering hidden-m-t">
-                        2,690,000.00
-                    </div>
-                </div>
-                <div class="header-box">
-                    <div class="header-amount centering hidden-m-t" id="walletAddressHeaderLbl"></div>
-                    <img src="./asset/img/bag-button.png" alt="" class="header-icon">
-                </div>
+          <div class="header-wrapper">
+            <div class="header-box">
+              <img src="./asset/img/home-button.png" alt="" class="header-icon" />
+              <div class="header-amount centering hidden-m-t" id="walletTokenBalanceLbl">0 XMS</div>
+              <div class="header-amount centering hidden-m-t" id="walletUsdtBalanceLbl">0 USDT</div>
             </div>
+
+            <div class="header-box">
+              <div class="header-amount centering hidden-m-t" id="walletAddressHeaderLbl"></div>
+              <img src="./asset/img/bag-button.png" alt="" class="header-icon" />
+            </div>
+          </div>
         </section>
 
         <!-- BAGs -->
@@ -57,25 +55,25 @@
                 <div class="bag-content">
                     <div class="swiper swiper-bag-content">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" data-ballIndex="0">
                                 <div class="bag-content-img">
                                     <img src="./asset/img/bell.png" alt="">
                                 </div>
                             </div>
 
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" data-ballIndex="3">
                                 <div class="bag-content-img">
                                     <img src="./asset/img/bell-2.png" alt="">
                                 </div>
                             </div>
 
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" data-ballIndex="2">
                                 <div class="bag-content-img">
                                     <img src="./asset/img/bell-3.png" alt="">
                                 </div>
                             </div>
 
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" data-ballIndex="1">
                                 <div class="bag-content-img">
                                     <img src="./asset/img/bell-4.png" alt="">
                                 </div>

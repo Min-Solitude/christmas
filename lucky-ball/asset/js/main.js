@@ -100,28 +100,35 @@ const displayAmountAward = (amount) => {
   document.querySelector("#award-value").innerText = amount;
 };
 
-const handleOpening = () => {
+const handleOpening = async () => {
   SCREEN.classList.add("opening");
 
-  // call api to get award amount token here
-  setTimeout(() => {
-    // random award to replace call api
-    const finalAward = Math.floor(Math.random() * 1000);
-    // displayAmountAward(finalAward);
+  const ballIndex =  Number(document.querySelector(".swiper-slide-active").attributes['data-ballIndex'].value);
 
+  const reward = await openBall(ballIndex);
+
+  try {
     // call success
     AWARD_ANIMATE_ELEMENT.innerHTML = `
-          <p class='size_text_award'>
-            Congratulation! You've received the letter "${
-              dataReward[finalAward % 13].text
-            }"
-          </p>
-          <img class='qua_awrad' style={{width: 2rem}} src="${
-            dataReward[finalAward % 13].url
-          }" alt="award" />
-      `;
-    SCREEN.classList.add("opened");
-  }, 1000);
+    <img class='qua_awrad' style="width: 120px" src="${
+      reward.reward.reward.banner
+    }" alt="award" />
+    <p class='size_text_award' style="margin-top: 30px">
+      Congratulation! You've received <b> ${
+        reward.reward.reward.type == 'nft' ? "The Letter" + reward.reward.reward.name.toUpperCase()
+        : 
+        `${reward.amount} ${reward.reward.reward.type == "token" ? "Token" : "USDT"}`
+      } </b>
+    </p>
+  `;
+  }catch (e) {
+    // call failed
+    AWARD_ANIMATE_ELEMENT.innerHTML = `
+    <p class='size_text_award' style="margin-bottom: 35%">
+      You've reached limit free ball today!
+    </p>`;
+  }
+  SCREEN.classList.add("opened");
 };
 
 const handleClose = () => {

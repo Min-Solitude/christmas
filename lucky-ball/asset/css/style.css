@@ -306,12 +306,13 @@ a {
 
 .pick-ball.opened .award-animate {
   display: flex;
-  transform: scale(1) translate(-50%, -150%);
+  transform: scale(1) translate(-50%, -100%);
   opacity: 1;
   height: auto;
   width: auto;
   z-index: 10;
   overflow: hidden;
+  top: 48%;
   flex-direction: column;
 }
 
@@ -322,6 +323,8 @@ a {
 .size_text_award{
   font-weight: 600;
   font-size: 18px;
+  max-width: 22rem;
+  text-align: center;
 }
 
 .pick-ball.opened .award {
@@ -351,6 +354,7 @@ a {
   opacity: 0;
   height: 0;
   width: 0;
+  position: relative;
 }
 
 .award-animate {
@@ -364,14 +368,6 @@ a {
   left: 50%;
 
   display: none;
-}
-
-.award-animate img {
-  width: 100%;
-}
-
-.qua_awrad{
-  width: 2rem;
 }
 
 .award-value {

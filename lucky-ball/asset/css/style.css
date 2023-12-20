@@ -357,6 +357,41 @@ a {
   position: relative;
 }
 
+.qua_awrad{
+  animation: zoomContent 0.5s ease forwards;
+}
+
+.award-main-price{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(0.6rem, -1rem) rotate(12deg);
+}
+
+.award-main-price img{
+  width: 12rem;
+}
+
+
+.award-main-price span {
+  position: absolute;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  bottom: 2rem;
+  transform: rotate(-13deg);
+  color: white;
+}
+
+@keyframes zoomContent {
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
 .award-animate {
   transform: scale(0) translate(-50%, -50%);
   opacity: 0;
@@ -1170,5 +1205,73 @@ to {
 }
 
 .popup_group_success_btn button img{
+  width: 10rem;
+}
+
+.modal_my_bag{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000000c9;
+  z-index: 100;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.show_modal_bag{
+  display: flex;
+  transition: 0.5s;
+}
+
+.modal_my_bag_group{
+  animation: zoomContent 0.5s ease forwards;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_my_bag_group img{
+  width: 60vw;
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  .modal_my_bag_group img{
+    width: 90vw;
+  }
+}
+
+.modal_my_bag_group_frame{
+  position: absolute;
+  width: 70%;
+  height: 50%;
+  transform: translateY(20%);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: start;
+  align-items: start;
+  overflow-y: scroll;
+  /* HIdden scroll bar */
+  background-color: green;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  &::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+}
+
+.modal_my_bag_group_frame_item{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+}
+
+.modal_my_bag_group_frame_item img{
   width: 10rem;
 }

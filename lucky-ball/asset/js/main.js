@@ -95,6 +95,7 @@ const dataReward = [
 // OPENING
 const SCREEN = document.querySelector("#pick-ball");
 const AWARD_ANIMATE_ELEMENT = document.querySelector("#award-animate");
+const PRICE = document.querySelector(".award-main-price");
 
 const displayAmountAward = (amount) => {
   document.querySelector("#award-value").innerText = amount;
@@ -102,8 +103,12 @@ const displayAmountAward = (amount) => {
 
 const handleOpening = async () => {
   SCREEN.classList.add("opening");
+  PRICE.style.display = "none";
 
-  const ballIndex =  Number(document.querySelector(".swiper-slide-active").attributes['data-ballIndex'].value);
+  const ballIndex = Number(
+    document.querySelector(".swiper-slide-active").attributes["data-ballIndex"]
+      .value
+  );
 
   const reward = await openBall(ballIndex);
 
@@ -115,13 +120,15 @@ const handleOpening = async () => {
     }" alt="award" />
     <p class='size_text_award' style="margin-top: 30px">
       Congratulation! You've received <b> ${
-        reward.reward.reward.type == 'nft' ? "The Letter" + reward.reward.reward.name.toUpperCase()
-        : 
-        `${reward.amount} ${reward.reward.reward.type == "token" ? "Token" : "USDT"}`
+        reward.reward.reward.type == "nft"
+          ? "The Letter" + reward.reward.reward.name.toUpperCase()
+          : `${reward.amount} ${
+              reward.reward.reward.type == "token" ? "Token" : "USDT"
+            }`
       } </b>
     </p>
   `;
-  }catch (e) {
+  } catch (e) {
     // call failed
     AWARD_ANIMATE_ELEMENT.innerHTML = `
     <p class='size_text_award' style="margin-bottom: 35%">
@@ -137,4 +144,5 @@ const handleClose = () => {
 
   // clear open award animate
   AWARD_ANIMATE_ELEMENT.innerHTML = ``;
+  PRICE.style.display = "block";
 };

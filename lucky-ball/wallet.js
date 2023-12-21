@@ -7,7 +7,7 @@ const BALL = [
 ]
 
 //CONNECT WALLET
-const MMSDK = new MetaMaskSDK.MetaMaskSDK()
+// const MMSDK = new MetaMaskSDK.MetaMaskSDK()
 let accounts;
 let walletAddress;
 let web3;
@@ -42,8 +42,8 @@ const getBalance = async () => {
 
   const data = await res.json();
 
-  document.querySelector("#walletTokenBalanceLbl").innerHTML = `${data.balance} XMS`;
-  document.querySelector("#walletUsdtBalanceLbl").innerHTML = `${data.usdtBalance} USDT`;
+  document.querySelector("#walletTokenBalanceLbl").innerHTML = `${data.balance || 0} XMS`;
+  document.querySelector("#walletUsdtBalanceLbl").innerHTML = `${data.usdtBalance || 0} USDT`;
 }
 
 const openBall = async (index) => {
@@ -72,6 +72,6 @@ const openBall = async (index) => {
 }
 
 setTimeout(async () => {
-    await connectWallet();
-    await getBalance();
+    // await connectWallet();
+    // await getBalance();
 }, 0);

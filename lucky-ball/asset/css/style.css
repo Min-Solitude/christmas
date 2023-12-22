@@ -1021,10 +1021,11 @@ to {
   cursor: pointer;
 }
 
-.wrapper_reward_group_content_row button:hover{
+.wrapper_reward_group_content_row button:hover:enabled{
   background: url(../img/btn2.png) no-repeat top center;
 }
-.wrapper_reward_group_content_row button:active{
+
+.wrapper_reward_group_content_row button:active:enabled{
   transform: scale(0.9);
 }
 

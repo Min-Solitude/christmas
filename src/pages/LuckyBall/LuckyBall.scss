@@ -1,0 +1,1270 @@
+.lucky-ball {
+  background: url(../../../public/images/lucky-ball/bg-lucky-ball.jpg) no-repeat
+    center center;
+  background-size: 100% 100%;
+
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow-y: auto;
+
+  &-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.awards-item{
+  margin-bottom: 20px;
+}
+
+.awards-item-name{
+  width: 100%;
+
+  text-align: center;
+
+  background-image: linear-gradient(180deg, #26840C 0%, #114002 100%);
+
+  padding: 5px 0;
+  border: 1px solid #3BC311;
+
+  font-weight: 600;
+
+  color: #FDE657;
+
+  margin-top: 5px;
+}
+
+.wrap-container {
+    z-index: 9;
+    position: relative;
+    height: 56.25vw;
+}
+
+.awards-list{
+  padding: 50px 0 10px;
+
+  img{
+    height: auto;
+    width: 100%;
+  }
+
+  .machine-title{
+    position: relative;
+    top: 0;
+  }
+}
+
+.award-ball{
+    position: absolute;
+    right: 10.5vw;
+    bottom: 13vw;
+    z-index: 9;
+
+    animation: 1s award-ball ease-in-out;
+
+    .item {
+        position: absolute;
+        width: 6.66667vw;
+        height: 6.51042vw;
+        z-index: 4;
+        .wrap-item {
+            transform-origin: center;
+            position: relative;
+            height: 6.51042vw;
+            background-image: url("../../../public/images/lucky-ball/ball.png");
+            background-size: 100% 100%;
+        }
+    
+        .ball-logo {
+            width: 6.09375vw;
+            height: 3.75vw;
+            background-image: url("../../../public/images/lucky-ball/ball_logo.png");
+            background-size: 100% 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+
+        .base-img {
+            position: absolute;
+            width: 2.86458vw;
+            top: 0.9375vw;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+    }
+
+}
+
+.machine {
+  position: absolute;
+  width: 37.86458vw;
+  top: 2.60417vw;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  
+  img{
+    height: auto;
+  }
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+   .machine {
+    width: 96.93333vw;
+    top: auto;
+    bottom: 0;
+  }
+}
+ .machine .wrap-machine-content {
+  position: relative;
+}
+ .machine .wrap-machine-content.animation-lottery {
+  animation: shake ease-in-out 2s infinite;
+}
+ .machine-title {
+  position: absolute;
+  top: 3.75vw;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+ .machine-title {
+    top: 10.26667vw;
+  }
+}
+ .machine-title .wrap-title {
+  position: relative;
+  display: inline-block;
+  font-size: 3.02083vw;
+  font-family: AdvancedLEDBoard;
+  background-color: rgba(143, 42, 195, 0.04);
+  box-shadow: 0 0 70px 20px rgba(143, 42, 195, 0.04);
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-text-stroke: 6px rgba(212, 74, 33, 0.3);
+  filter: drop-shadow(0 0 13px #fff04c);
+  animation: glow 0.17s ease infinite forwards;
+}
+
+  .machine-title
+  .wrap-title
+  .char-ani1 {
+  animation: 0.5s text-blink 1.5s infinite alternate;
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+ .machine-title .wrap-title {
+    font-size: 7.73333vw;
+  }
+}
+
+ .machine .wrap-machine-content .machine-grass {
+  position: absolute;
+  width: 26.40625vw;
+  z-index: 5;
+  top: 10.83333vw;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+   .machine .wrap-machine-content .machine-grass {
+    width: 67.6vw;
+    top: 27.73333vw;
+  }
+}
+ .machine .wrap-machine-content .machine-light {
+  position: absolute;
+  width: 26.40625vw;
+  z-index: 7;
+  top: -1.82292vw;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  pointer-events: none;
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+   .machine .wrap-machine-content .machine-light {
+    width: 67.6vw;
+    top: -4.66667vw;
+  }
+}
+ .machine .wrap-machine-content .list-ball {
+  position: absolute;
+  width: 26.40625vw;
+  height: 22.86458vw;
+  top: 10.83333vw;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 6;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+   .machine .wrap-machine-content .list-ball {
+    width: 67.6vw;
+    height: 58.53333vw;
+    top: 27.73333vw;
+  }
+}
+ .machine .wrap-machine-content .list-ball .wrap-ball {
+  position: relative;
+  height: 22.23958vw;
+  width: 25.72917vw;
+  margin-top: 0.36458vw;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+   .machine .wrap-machine-content .list-ball .wrap-ball {
+    height: 56.93333vw;
+    width: 65.86667vw;
+    margin-top: 0.93333vw;
+  }
+}
+
+ .machine .wrap-machine-content .list-ball .wrap-ball .item {
+  position: absolute;
+  width: 6.66667vw;
+  height: 6.51042vw;
+  z-index: 4;
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    .award-ball .item,
+   .machine .wrap-machine-content .list-ball .wrap-ball .item {
+    width: 17.06667vw;
+    height: 16.66667vw;
+  }
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball
+  .item
+  .wrap-item {
+  transform-origin: center;
+  position: relative;
+  height: 6.51042vw;
+  background-image: url("../../../public/images/lucky-ball/ball.png");
+  background-size: 100% 100%;
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    .award-ball .item .wrap-item,
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball
+    .item
+    .wrap-item {
+    height: 16.66667vw;
+  }
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball
+  .item
+  .ball-logo {
+  width: 6.09375vw;
+  height: 3.75vw;
+  background-image: url("../../../public/images/lucky-ball/ball_logo.png");
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    .award-ball .item .ball-logo,
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball
+    .item
+    .ball-logo {
+    width: 15.6vw;
+    height: 9.6vw;
+  }
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball
+  .item
+  .base-img {
+  position: absolute;
+  width: 2.86458vw;
+  top: 0.9375vw;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  filter: grayscale(1);
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    .award-ball .item .base-img,
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball
+    .item
+    .base-img {
+    width: 7.33333vw;
+    top: 2.4vw;
+  }
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball
+  .item:first-child {
+  bottom: 0.57292vw;
+  left: -1.82292vw;
+  transform: rotate(-25deg);
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball
+    .item:first-child {
+    bottom: 1.46667vw;
+    left: -4.66667vw;
+  }
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball
+  .item:nth-child(2) {
+  bottom: -1.61458vw;
+  left: 2.60417vw;
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball
+    .item:nth-child(2) {
+    bottom: -4.13333vw;
+    left: 6.66667vw;
+  }
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball
+  .item:nth-child(3) {
+  bottom: 0.83333vw;
+  left: 7.76042vw;
+  z-index: 3;
+  transform: rotate(-15deg);
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball
+    .item:nth-child(3) {
+    bottom: 2.13333vw;
+    left: 19.86667vw;
+  }
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball
+  .item:nth-child(4) {
+  bottom: -1.35417vw;
+  left: 10.26042vw;
+  transform: rotate(8deg);
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball
+    .item:nth-child(4) {
+    bottom: -3.46667vw;
+    left: 26.26667vw;
+  }
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball
+  .item:nth-child(5) {
+  bottom: -0.52083vw;
+  left: 16.30208vw;
+  transform: rotate(48deg);
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball
+    .item:nth-child(5) {
+    bottom: -1.33333vw;
+    left: 41.73333vw;
+  }
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball
+  .item:nth-child(6) {
+  bottom: -0.67708vw;
+  left: 21.04167vw;
+  transform: rotate(-22deg);
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball
+    .item:nth-child(6) {
+    bottom: -1.73333vw;
+    left: 53.86667vw;
+  }
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball
+  .item:nth-child(7) {
+  bottom: 6.51042vw;
+  left: -0.72917vw;
+  transform: rotate(32deg);
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball
+    .item:nth-child(7) {
+    bottom: 16.66667vw;
+    left: -1.86667vw;
+  }
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball
+  .item:nth-child(8) {
+  bottom: 4.6875vw;
+  left: 3.17708vw;
+  z-index: 3;
+  transform: rotate(32deg);
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball
+    .item:nth-child(8) {
+    bottom: 12vw;
+    left: 8.13333vw;
+  }
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball
+  .item:nth-child(9) {
+  bottom: 3.90625vw;
+  left: 6.25vw;
+  transform: rotate(32deg);
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball
+    .item:nth-child(9) {
+    bottom: 10vw;
+    left: 16vw;
+  }
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball
+  .item:nth-child(10) {
+  bottom: 6.77083vw;
+  left: 9.375vw;
+  z-index: 3;
+  transform: rotate(-8deg);
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball
+    .item:nth-child(10) {
+    bottom: 17.33333vw;
+    left: 24vw;
+  }
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball
+  .item:nth-child(11) {
+  bottom: 8.64583vw;
+  left: 13.69792vw;
+  transform: rotate(-5deg);
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball
+    .item:nth-child(11) {
+    bottom: 22.13333vw;
+    left: 35.06667vw;
+  }
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball
+  .item:nth-child(12) {
+  bottom: 2.8125vw;
+  left: 13.85417vw;
+  z-index: 3;
+  transform: rotate(-13deg);
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball
+    .item:nth-child(12) {
+    bottom: 7.2vw;
+    left: 35.46667vw;
+  }
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball
+  .item:nth-child(13) {
+  bottom: 5.72917vw;
+  left: 17.60417vw;
+  transform: rotate(-3deg);
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball
+    .item:nth-child(13) {
+    bottom: 14.66667vw;
+    left: 45.06667vw;
+  }
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball
+  .item:nth-child(14) {
+  bottom: 3.59375vw;
+  left: 20.9375vw;
+  transform: rotate(15deg);
+  z-index: 3;
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball
+    .item:nth-child(14) {
+    bottom: 9.2vw;
+    left: 53.6vw;
+  }
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball
+  .item:nth-child(15) {
+  bottom: 9.32292vw;
+  left: 4.27083vw;
+  transform: rotate(15deg);
+  z-index: 3;
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball
+    .item:nth-child(15) {
+    bottom: 23.86667vw;
+    left: 10.93333vw;
+  }
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball
+  .item:nth-child(16) {
+  bottom: 10.36458vw;
+  left: 9.47917vw;
+  transform: rotate(-15deg);
+  z-index: 3;
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball
+    .item:nth-child(16) {
+    bottom: 23.86667vw;
+    left: 10.93333vw;
+  }
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-1
+  .item
+  .wrap-item {
+  animation: ballMoving1 2s linear infinite;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-1
+  .item:nth-child(2)
+  .wrap-item {
+  animation: ballMoving2 1.3s linear infinite;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-1
+  .item:nth-child(3)
+  .wrap-item {
+  animation: ballMoving3 2s linear infinite;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-1
+  .item:nth-child(4)
+  .wrap-item {
+  animation: ballMoving2 1s linear infinite;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-1
+  .item:nth-child(5)
+  .wrap-item {
+  animation: ballMoving4 2s linear infinite;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-1
+  .item:nth-child(7)
+  .wrap-item {
+  animation: ballMoving1 2s linear infinite;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-1
+  .item:nth-child(10)
+  .wrap-item {
+  animation: ballMoving1 1.6s linear infinite;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-1
+  .item:nth-child(11)
+  .wrap-item {
+  animation: ballMoving3 2s linear infinite;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-1
+  .item:nth-child(12)
+  .wrap-item {
+  animation: ballMoving1 1.8s linear infinite;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-1
+  .item:nth-child(13)
+  .wrap-item {
+  animation: ballMoving4 2.1s linear infinite;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-1
+  .item:nth-child(14)
+  .wrap-item {
+  animation: ballMoving3 2.3s linear infinite;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-1
+  .item:nth-child(15)
+  .wrap-item {
+  animation: ballMoving4 1.1s linear infinite;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-1
+  .item:nth-child(16)
+  .wrap-item {
+  animation: ballMoving3 1.3s linear infinite;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-2
+  .item {
+  animation: ballUp1 4s linear;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-2
+  .item
+  .wrap-item {
+  animation: ballRotate 1.5s linear infinite;
+  transform-origin: center;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-2
+  .item:nth-child(2) {
+  animation: ballUp1 4s linear;
+  animation-delay: 0.5s;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-2
+  .item:nth-child(3) {
+  animation: ballUp2 4s linear;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-2
+  .item:nth-child(4) {
+  animation: ballUp3 4s linear;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-2
+  .item:nth-child(5) {
+  animation: ballUp4 4s linear;
+  animation-delay: 0.7s;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-2
+  .item:nth-child(6) {
+  animation: ballUp3 4s linear;
+  animation-delay: 0.9s;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-2
+  .item:nth-child(7) {
+  animation: ballUp1 4s linear;
+  animation-delay: 1s;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-2
+  .item:nth-child(8) {
+  animation: ballUp2 4s linear;
+  animation-delay: 1.1s;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-2
+  .item:nth-child(9) {
+  animation: ballUp2 4s linear;
+  animation-delay: 1.2s;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-2
+  .item:nth-child(10) {
+  animation: ballUp1 4s linear;
+  animation-delay: 0.2s;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-2
+  .item:nth-child(11) {
+  animation: ballUp1 4s linear;
+  animation-delay: 0.3s;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-2
+  .item:nth-child(12) {
+  animation: ballUp3 4s linear;
+  animation-delay: 1.1s;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-2
+  .item:nth-child(13) {
+  animation: ballUp3 4s linear;
+  animation-delay: 0.5s;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-2
+  .item:nth-child(14) {
+  animation: ballUp4 4s linear;
+  animation-delay: 0.5s;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-2
+  .item:nth-child(15) {
+  animation: ballUp1 4s linear;
+  animation-delay: 1.2s;
+}
+
+  .machine
+  .wrap-machine-content
+  .list-ball
+  .wrap-ball.animation-lottery-2
+  .item:nth-child(16) {
+  animation: ballUp1 4s linear;
+  animation-delay: 1s;
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-1
+    .item
+    .wrap-item {
+    animation: ballMoving1mb 2s linear infinite;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-1
+    .item:nth-child(2)
+    .wrap-item {
+    animation: ballMoving2mb 1.3s linear infinite;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-1
+    .item:nth-child(3)
+    .wrap-item {
+    animation: ballMoving3mb 2s linear infinite;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-1
+    .item:nth-child(4)
+    .wrap-item {
+    animation: ballMoving2mb 1s linear infinite;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-1
+    .item:nth-child(5)
+    .wrap-item {
+    animation: ballMoving4mb 2s linear infinite;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-1
+    .item:nth-child(7)
+    .wrap-item {
+    animation: ballMoving1mb 2s linear infinite;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-1
+    .item:nth-child(10)
+    .wrap-item {
+    animation: ballMoving1mb 1.6s linear infinite;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-1
+    .item:nth-child(11)
+    .wrap-item {
+    animation: ballMoving3mb 2s linear infinite;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-1
+    .item:nth-child(12)
+    .wrap-item {
+    animation: ballMoving1mb 1.8s linear infinite;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-1
+    .item:nth-child(13)
+    .wrap-item {
+    animation: ballMoving4mb 2.1s linear infinite;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-1
+    .item:nth-child(14)
+    .wrap-item {
+    animation: ballMoving3mb 2.3s linear infinite;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-1
+    .item:nth-child(15)
+    .wrap-item {
+    animation: ballMoving4mb 1.1s linear infinite;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-1
+    .item:nth-child(16)
+    .wrap-item {
+    animation: ballMoving3mb 1.3s linear infinite;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-2
+    .item {
+    animation: ballUp1mb 4s linear;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-2
+    .item
+    .wrap-item {
+    animation: ballRotate 1.5s linear infinite;
+    transform-origin: center;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-2
+    .item:nth-child(2) {
+    animation: ballUp1mb 4s linear;
+    animation-delay: 0.5s;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-2
+    .item:nth-child(3) {
+    animation: ballUp2mb 4s linear;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-2
+    .item:nth-child(4) {
+    animation: ballUp3mb 4s linear;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-2
+    .item:nth-child(5) {
+    animation: ballUp4mb 4s linear;
+    animation-delay: 0.7s;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-2
+    .item:nth-child(6) {
+    animation: ballUp3mb 4s linear;
+    animation-delay: 0.9s;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-2
+    .item:nth-child(7) {
+    animation: ballUp1mb 4s linear;
+    animation-delay: 1s;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-2
+    .item:nth-child(8) {
+    animation: ballUp2mb 4s linear;
+    animation-delay: 1.1s;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-2
+    .item:nth-child(9) {
+    animation: ballUp2mb 4s linear;
+    animation-delay: 1.2s;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-2
+    .item:nth-child(10) {
+    animation: ballUp1mb 4s linear;
+    animation-delay: 0.2s;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-2
+    .item:nth-child(11) {
+    animation: ballUp1mb 4s linear;
+    animation-delay: 0.3s;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-2
+    .item:nth-child(12) {
+    animation: ballUp3mb 4s linear;
+    animation-delay: 1.1s;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-2
+    .item:nth-child(13) {
+    animation: ballUp3mb 4s linear;
+    animation-delay: 0.5s;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-2
+    .item:nth-child(14) {
+    animation: ballUp4mb 4s linear;
+    animation-delay: 0.5s;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-2
+    .item:nth-child(15) {
+    animation: ballUp1mb 4s linear;
+    animation-delay: 1.2s;
+  }
+  
+    .machine
+    .wrap-machine-content
+    .list-ball
+    .wrap-ball.animation-lottery-2
+    .item:nth-child(16) {
+    animation: ballUp1mb 4s linear;
+    animation-delay: 1s;
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait)
+{
+    .wrap-container {
+        min-height: 156vw;
+    }
+}
+
+
+
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+    .lucky-ball{
+        background-size: auto 100%;
+    }
+
+    .award-ball{
+        right: 27vw;
+        bottom: 34vw;
+    }
+}
+
+.group-btn {
+  position: absolute;
+  width: 23.4375vw;
+  left: 2.08333vw;
+  bottom: 3.38542vw;
+  z-index: 9;
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+.group-btn {
+    width: 60vw;
+    left: 5.33333vw;
+    bottom: 8.66667vw;
+  }
+}
+ .group-btn a {
+  display: inline-block;
+  width: 7.55208vw;
+  margin: 0 0.10417vw;
+  position: relative;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+   .group-btn a {
+    width: 19.33333vw;
+    margin: 0 0.26667vw;
+  }
+}
+ .group-btn a:hover {
+  transform: scale(0.93);
+}
+ .group-btn a span {
+  display: inline-block;
+  position: absolute;
+  top: -0.3125vw;
+  right: 0;
+}
+ .group-btn a span img {
+  max-width: none;
+  width: 2.34375vw;
+}
+

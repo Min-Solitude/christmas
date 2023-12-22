@@ -1,14 +1,47 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import './LuckyWheel.scss'
+import './LuckyWheel.scss';
+import Config from '../../config/Config';
 
 import Countdown from 'react-countdown';
+import { io } from 'socket.io-client';
 
 export default function LuckyWheel() {
-
+  const socket = io(Config.socketHost);
   const [rotateState,setRotateState] = useState('')
   const [resultNumber,setResultNumber] = useState('')
 
+  useEffect(() => {
+    // function onConnect() {
+    //   console.log("ON CONNECT");
+    // }
+
+    // function onDisconnect() {
+      
+    //   console.log("ON DIS");
+    // }
+
+    // function onCountDown(value) {
+      
+    //   console.log(value);
+    // }
+
+    // function onResultNum(value) {
+    //   console.log(value);
+    // }
+
+    // socket.on('connect', onConnect);
+    // socket.on('disconnect', onDisconnect);
+    // socket.on('epochTime', onCountDown);
+    // socket.on('data', onResultNum);
+
+    // return () => {
+    //   socket.off('connect', onConnect);
+    //   socket.off('disconnect', onDisconnect);
+    //   socket.off('epochTime', onCountDown);
+    //   socket.on('data', onCountDown);
+    // };
+  }, []);
   
   const handleSpinning = () => {
     const resultNum = Math.floor(Math.random() * 7) + 1;

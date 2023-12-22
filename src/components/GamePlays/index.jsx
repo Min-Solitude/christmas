@@ -19,14 +19,14 @@ export default function GamePlays({name}) {
                     </div>
                 </Link>
 
-                <Link to="/lucky-ball" className="gameplays-item">
+                {/* <Link to="/lucky-ball" className="gameplays-item">
                     <div className="gameplays-item-img centering">
                         <img src="/images/lucky-ball.jpg" alt="" />
                     </div>
                     <div className="primary-gradient-text">
                         Lucky Ball
                     </div>
-                </Link>
+                </Link> */}
 
                 <a href="https://pick-ball.vercel.app/" className="gameplays-item">
                     <div className="gameplays-item-img centering">
@@ -37,14 +37,14 @@ export default function GamePlays({name}) {
                     </div>
                 </a>
 
-                <Link to='/prediction' className="gameplays-item">
+                {/* <Link to='/prediction' className="gameplays-item">
                     <div className="gameplays-item-img centering">
                         <img src="/images/predition.jpg" alt="" />
                     </div>
                     <div className="primary-gradient-text">
                         Prediction
                     </div>
-                </Link>
+                </Link> */}
 
                 <Link to="/login" className="gameplays-item">
                     <div className="gameplays-item-img centering">

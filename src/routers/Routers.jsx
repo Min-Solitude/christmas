@@ -29,7 +29,7 @@ export default function Routers() {
 
         <Route exact path="/betting/room" element={<BettingRoom />} />
 
-        <Route exact path="/lucky-ball" element={<LuckyBall />} />
+        {/* <Route exact path="/lucky-ball" element={<LuckyBall />} /> */}
 
     </Routes>
   )

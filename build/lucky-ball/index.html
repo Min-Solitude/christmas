@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="asset/img/favicon.png" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="asset/css/style.css" />
+    <link rel="stylesheet" href="asset/css/responsive.css" />
+    <title>Pick Ball</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.3.5/web3.min.js"></script>
+    <script src="wallet.js"></script>
+    <script src="gift.js"></script>
+  </head>
+
+  <body>
+    <div class="pick-ball">
+     
+      <!-- HEADER -->
+      <section class="header">
+        <div class="header-wrapper">
+          <div class="header-box">
+            <a href="https://christmas.lavenes.com">
+              <img src="asset/img/home-button.png" alt="" class="header-icon" />
+            </a>
+            <div class="header-amount centering hidden-m-t" id="walletTokenBalanceLbl">0 XMS</div>
+            <div class="header-amount centering hidden-m-t" id="walletUsdtBalanceLbl">0 USDT</div>
+          </div>
+
+          <div class="header-box">
+            <div class="header-amount centering hidden-m-t" id="walletAddressHeaderLbl"></div>
+            <a href="https://christmas.lavenes.com/market/deposit">
+              <img src="asset/img/bag-button.png" alt="" class="header-icon my-bag" />
+            </a>
+          </div>
+        </div>
+      </section>
+ <!-- COUNTDOWN  -->
+ <div class="wrapper_countdown">
+  <div class="wrapper_countdown_frame">
+    <div class="wrapper_countdown_column">
+      <img src="asset/img/countdown-globe.png" alt="" />
+      <div class="wrapper_countdown_column_group">
+        <p id="days" class="data"></p>
+        <span>Days</span>
+      </div>
+    </div>
+    <div class="wrapper_countdown_column">
+      <img src="asset/img/countdown-globe.png" alt="" />
+      <div class="wrapper_countdown_column_group">
+        <p id="hours" class="data"></p>
+        <span>Hours</span>
+      </div>
+    </div>
+    <div class="wrapper_countdown_column">
+      <img src="asset/img/countdown-globe.png" alt="" />
+      <div class="wrapper_countdown_column_group">
+        <p id="minutes" class="data"></p>
+        <span>Minutes</span>
+      </div>
+    </div>
+    <div class="wrapper_countdown_column">
+      <img src="asset/img/countdown-globe.png" alt="" />
+      <div class="wrapper_countdown_column_group">
+        <p id="seconds" class="data"></p>
+        <span>Seconds</span>
+      </div>
+    </div>
+  </div>
+</div>
+      <!-- TREE -->
+      <div class="centering">
+        <div class="tree">
+          <img src="asset/img/tree.png" alt="" class="tree-img" />
+
+          <a class="bell bell--1" href="/open.html">
+            <img src="asset/img/bell.png" alt="" class="" />
+            <!-- <span>0.02 ETH</span> -->
+          </a>
+
+          <a class="bell bell--2" href="/open.html">
+            <img src="asset/img/bell-2.png" alt="" class="" />
+            <!-- <span>0.02 ETH</span> -->
+          </a>
+
+          <a class="bell bell--3" href="/open.html">
+            <img src="asset/img/bell-3.png" alt="" class="" />
+            <!-- <span>0.02 ETH</span> -->
+          </a>
+
+          <a class="bell bell--4" href="/open.html">
+            <img src="asset/img/bell-4.png" alt="" class="" />
+            <!-- <span>0.02 ETH</span> -->
+          </a>
+
+          <a class="bell bell--5" href="/open.html">
+            <img src="asset/img/bell-5.png" alt="" class="" />
+            <!-- <span>0.02 ETH</span> -->
+          </a>
+        </div>
+      </div>
+      
+      <a href="#reward" class="instruction">
+        <div class="instruction_group">
+          <img src="asset/img/ntyet.png" alt="">
+          <img src="asset/img/arrow.png" alt="">
+        </div>
+      </a>
+
+      <div class="wrapper_reward" id="reward">
+        <div class="wrapper_reward_group">
+          <img
+            src="asset/img/khungkhung.png"
+            alt=""
+            class="wrapper_reward_group_background"
+          />
+          <img
+            src="asset/img/kmo.png"
+            alt=""
+            class="wrapper_reward_group_background__mobile"
+          />
+
+          <div class="wrapper_reward_group_content" id="rewardContent">
+
+            
+          </div>
+          
+          
+        </div>
+
+      
+        <div class="popup">
+          <div class="popup_group" id="popup_confirm">
+            <img src="asset/img/frameArwad.png" alt="">
+            <div class="popup_group_content">
+              <h1 class="popup_title"></h1>
+              <div class="popup_group_content_btn">
+                <button id="btn_cancel_popup">
+                  <img src="asset/img/btnorange.png" alt="">
+                  <span>Cancel</span>
+                </button>
+                <button id="btn_reward_popup">
+                  <img src="asset/img/btn2.png" alt="">
+                  <span>Reward</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="popup_group_success" id="popup_success">
+            <img src="asset/img/successs.png" alt="">
+            <div class="popup_group_success_content">
+              <h1>Successful changing the phrase. Your balance has been update!</p>
+              <div class="popup_group_success_btn">
+                <button onclick="hidePopupSuccess()">
+                  <img src="asset/img/btnorange.png" alt="">
+                  <span>Continute</span>
+                </button>
+              </div>
+            </div>
+          </div>  
+        </div>
+      </div>
+      <div class="modal_my_bag">
+        <div class="modal_my_bag_group">
+          <img src="asset/img/myBag.png" alt="" class="frameWeb">
+          <img src="asset/img/framemobile.png" alt="" class="frameMobile">
+          <div class="modal_my_bag_group_frame">
+            <div class="modal_my_bag_group_frame_item">
+              <img src="asset/img/frameframe.png" alt="">
+              <img src="asset/img/btnframe.png" alt="">
+              <img src="asset/img/qua1.png" alt="">
+            </div>
+            <div class="modal_my_bag_group_frame_item">
+              <img src="asset/img/frameframe.png" alt="">
+              <img src="asset/img/btnframe.png" alt="">
+              <img src="asset/img/qua1.png" alt="">
+            </div>
+            <div class="modal_my_bag_group_frame_item">
+              <img src="asset/img/frameframe.png" alt="">
+              <img src="asset/img/btnframe.png" alt="">
+              <img src="asset/img/qua1.png" alt="">
+            </div>
+            <div class="modal_my_bag_group_frame_item">
+              <img src="asset/img/frameframe.png" alt="">
+              <img src="asset/img/btnframe.png" alt="">
+              <img src="asset/img/qua1.png" alt="">
+            </div>
+            <div class="modal_my_bag_group_frame_item">
+              <img src="asset/img/frameframe.png" alt="">
+              <img src="asset/img/btnframe.png" alt="">
+              <img src="asset/img/qua1.png" alt="">
+            </div>
+            <div class="modal_my_bag_group_frame_item">
+              <img src="asset/img/frameframe.png" alt="">
+              <img src="asset/img/btnframe.png" alt="">
+              <img src="asset/img/qua1.png" alt="">
+            </div>
+            <div class="modal_my_bag_group_frame_item">
+              <img src="asset/img/frameframe.png" alt="">
+              <img src="asset/img/btnframe.png" alt="">
+              <img src="asset/img/qua1.png" alt="">
+            </div>
+            <div class="modal_my_bag_group_frame_item">
+              <img src="asset/img/frameframe.png" alt="">
+              <img src="asset/img/btnframe.png" alt="">
+              <img src="asset/img/qua1.png" alt="">
+            </div>
+            <div class="modal_my_bag_group_frame_item">
+              <img src="asset/img/frameframe.png" alt="">
+              <img src="asset/img/btnframe.png" alt="">
+              <img src="asset/img/qua1.png" alt="">
+            </div>
+            <div class="modal_my_bag_group_frame_item">
+              <img src="asset/img/frameframe.png" alt="">
+              <img src="asset/img/btnframe.png" alt="">
+              <img src="asset/img/qua1.png" alt="">
+            </div>
+            <div class="modal_my_bag_group_frame_item">
+              <img src="asset/img/frameframe.png" alt="">
+              <img src="asset/img/btnframe.png" alt="">
+              <img src="asset/img/qua1.png" alt="">
+            </div>
+          </div>
+          <div class="btn-close-modal" id="close-bag">
+            <img src="asset/img/btnorange.png" alt="">
+            <span>Đóng</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="asset/js/countdown.js"></script>
+<script src="asset/js/reward.js"></script>
+<script src="asset/js/bag.js"></script>
+<!-- <script src="asset/js/main.js"></script> -->

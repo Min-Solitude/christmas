@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bbd87ac1.css",
+    "main.js": "/static/js/main.b6924b3d.js",
+    "static/js/787.f5f1ef80.chunk.js": "/static/js/787.f5f1ef80.chunk.js",
+    "static/media/background.png": "/static/media/background.8602d1887e31e1ae512b.png",
+    "static/media/bg.jpg": "/static/media/bg.51492bdef9cf525a20be.jpg",
+    "static/media/menu.png": "/static/media/menu.9bb63893533820f1d166.png",
+    "static/media/bg.png": "/static/media/bg.01f285c66106d9c28567.png",
+    "static/media/bg-lucky-ball.jpg": "/static/media/bg-lucky-ball.b5de6eebb12300717d66.jpg",
+    "static/media/button.png": "/static/media/button.b1abe58b1a15d8786ea4.png",
+    "static/media/staking-bg.png": "/static/media/staking-bg.2dc1d8d58856ce7b4c1b.png",
+    "static/media/gameplay-ball.png": "/static/media/gameplay-ball.98c13d81f2f141e43abd.png",
+    "static/media/tokenomic-ball.png": "/static/media/tokenomic-ball.8ecb7373a85945fe07c3.png",
+    "static/media/about-ball.png": "/static/media/about-ball.0ed87522d7f163abe47c.png",
+    "static/media/story-ball.png": "/static/media/story-ball.c1441dd0e425b9528a0a.png",
+    "static/media/roadmap-ball.png": "/static/media/roadmap-ball.93df0244b169ae0d293c.png",
+    "static/media/foot.png": "/static/media/foot.c6b57d55b1b4a489b586.png",
+    "static/media/wheel-clear.png": "/static/media/wheel-clear.0acd8a3eb7588384e619.png",
+    "static/media/button-nav.png": "/static/media/button-nav.1c6940dbeb1d373546c4.png",
+    "static/media/AdvancedLEDBoard-7.woff2": "/static/media/AdvancedLEDBoard-7.9f5005ed07b9fd1bbd4a.woff2",
+    "static/media/ball.png": "/static/media/ball.bce826272a72f96046a2.png",
+    "static/media/ball_logo.png": "/static/media/ball_logo.0e7ceedc0e56c2b2f5e8.png",
+    "index.html": "/index.html",
+    "main.bbd87ac1.css.map": "/static/css/main.bbd87ac1.css.map",
+    "main.b6924b3d.js.map": "/static/js/main.b6924b3d.js.map",
+    "787.f5f1ef80.chunk.js.map": "/static/js/787.f5f1ef80.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bbd87ac1.css",
+    "static/js/main.b6924b3d.js"
+  ]
+}

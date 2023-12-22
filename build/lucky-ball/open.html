@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="asset/img/favicon.png" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="asset/css/responsive.css">
+    <title>Pick Ball</title>
+
+    <script src="https://c0f4f41c-2f55-4863-921b-sdk-docs.github.io/cdn/metamask-sdk.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.3.5/web3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+    <script src="wallet.js"></script>
+</head>
+
+<body>
+    <div id="pick-ball" class="pick-ball">
+        <!-- HEADER -->
+        <section class="header">
+          <div class="header-wrapper">
+            <div class="header-box">
+              <a href="https://christmas.lavenes.com">
+                <img src="asset/img/home-button.png" alt="" class="header-icon" />
+              </a>
+              <div class="header-amount centering hidden-m-t" id="walletTokenBalanceLbl">0 XMS</div>
+              <div class="header-amount centering hidden-m-t" id="walletUsdtBalanceLbl">0 USDT</div>
+            </div>
+
+            <div class="header-box">
+              <div class="header-amount centering hidden-m-t" id="walletAddressHeaderLbl"></div>
+              <a href="https://christmas.lavenes.com/market/deposit">
+                <img src="asset/img/bag-button.png" alt="" class="header-icon my-bag" />
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- BAGs -->
+        <div class="bag-main centering">
+            <div class="bag">
+                <!-- Bag background -->
+                <img src="asset/img/bag.png" class="bag-img">
+
+                <!-- Bag control -->
+                <img src="asset/img/left-button.png" alt="" class="bag-control bag-control-left ">
+                <img src="asset/img/right-button.png" alt="" class="bag-control bag-control-right">
+
+                <!-- Bag Content -->
+                <div class="bag-content">
+                    <div class="swiper swiper-bag-content">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" data-ballIndex="0">
+                                <div class="bag-content-img">
+                                    <img src="asset/img/bell.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide" data-ballIndex="3">
+                                <div class="bag-content-img">
+                                    <img src="asset/img/bell-2.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide" data-ballIndex="2">
+                                <div class="bag-content-img">
+                                    <img src="asset/img/bell-3.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide" data-ballIndex="1">
+                                <div class="bag-content-img">
+                                    <img src="asset/img/bell-4.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AWARD -->
+        <div class="award-main centering">
+            <div id="award-animate" class="award-animate centering">
+            </div>
+            <div class="award">
+                <img src="asset/img/award-bg.png" alt="" class="award-img">
+                <div class="award-value">
+                    <div id="award-value" class="token-gradient">
+                    </div>
+                    <!-- <span class="primary-gradient-text">
+                        FAI
+                    </span> -->
+                    <!-- <button>
+                        <img src="asset/img/btn2.png" alt="">
+                        <span>Continute</span>
+                      </button> -->
+                </div>
+            </div>
+            <div class="award-main-price" id="ball-main-price">
+                <img src="asset/img/price.png" alt="">
+                <span></span>
+            </div>
+        </div>
+
+        <!-- LOADING -->
+        <div class="loading">
+            <div class="centering">
+                <div class="loadingio-spinner-ripple-53fvicie5vy">
+                    <div class="ldio-que9pocm4l">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BUTTON -->
+        <div class="choose-button buttons-bag">
+            <div class="button-main" onclick="handleOpening()">
+                OPEN
+            </div>
+
+            <a href="/" class="button-main second-button">
+                CANCEL
+            </a>
+        </div>
+
+        <div class="choose-button buttons-claim">
+            <div class="button-main" onclick="handleClose()">
+                Claim
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+<script src="asset/js/swiper-bundle.min.js"></script>
+<script src="asset/js/main.js"></script>

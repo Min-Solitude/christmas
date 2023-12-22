@@ -144,5 +144,5 @@ const handleClose = () => {
 
   // clear open award animate
   AWARD_ANIMATE_ELEMENT.innerHTML = ``;
-  PRICE.style.display = "block";
+  PRICE.style.display = "flex";
 };

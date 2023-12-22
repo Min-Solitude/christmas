@@ -1,5 +1,5 @@
 
-const ENDPOINT = 'http://localhost';
+const ENDPOINT = 'https://api.christmas.lavenes.com';
 const BALL = [
   'ce234857-4574-433c-b33a-fb3d17aa9ee5',
   '2267b2df-a372-4623-bd89-9064a1556226',
@@ -161,7 +161,10 @@ const claimReward = async (giftIndex) => {
       })
     });
 
-    await fetchGift();
+    if(!window.location.pathname.includes('/open.html')) {
+      await fetchGift();
+    }
+
     await getBalance();
   });
 
@@ -179,7 +182,7 @@ const hidePopupSuccess = () => {
     await fetchGift();
 })();
 
-if(window.location.pathname == '/open.html') {
+if(window.location.pathname.includes('/open.html')) {
   setInterval(() => {
     const ballIndex = Number(
       document.querySelector(".swiper-slide-active").attributes["data-ballIndex"]
